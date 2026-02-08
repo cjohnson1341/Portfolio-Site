@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog Post
+    <title>Fantasy MMO
 	</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="images/Favicon.png" />
@@ -17,7 +17,7 @@
 
 <section class="hero">
 	<div class="cover_photo">
-		<img class="cover_photo" src="images/PixelPusher-Hero.jpg">
+		<img class="cover_photo" src="images/MMOHero.png">
 	</div>
 </section>
 
@@ -25,7 +25,7 @@
 	
 <section class="summary">
 	<div class="main_summary">
-		<p>As a UX designer, I've recently felt that I needed more UI design practice to keep my skills sharp and up to date with the market. This was a side project to practice with more elaborate and complicated styles of UI design.
+		<p>As a fun personal project, I decided to tackle a high fantasy MMO game inventory. I wireframed, prototyped, and have been implementing the UI in Unreal Engine 5 through the use of MVVM and UMG. I chose inventory management because in MMOs, it can be one of the hardest user experiences to design. It needs to flow easily while also showing the user everything they have access to. It also needs to be flexible enough for the game team to add and take away things they need, like rarity, gems, etc. Depending on if you are designing for console or not, you also need to consider things like how to open sublists or make category structures that can be easily accessed with a controller vs a mouse. A lot of times design will use a virtual mouse when switching to console, but you still have to consider how tricky your hit targets might be for something with less control than a PC mouse.
 			</p>
 	</div>
 	<div class="summary_columns">
@@ -33,12 +33,11 @@
 		<ul class="list">
 			<li><strong>Role:</strong> UX/UI and Technical Designer </li>
 			<li><strong>Project Brief:</strong> Design a high fantasy MMO inventory system that let's a player see what they have equipped while in world.</li>
-			<li><strong>Theme:</strong> LowPoly</li>
 		</ul>
 	</div>
 	<div class="summary_right">
 		<ul class="list">
-			<li><strong>Requirements:</strong> Inventory Grid, Button Design, UI look and feel, 3d Character, PC layout (including all items from an open world play screen like map, item slots, etc)</li>
+			<li><strong>Requirements:</strong> Inventory Grid for a PC and Console layout (including all items from an open world play screen like equipped items, item slots, etc)</li>
 			
 		</ul>
 	</div>
@@ -46,9 +45,7 @@
 </section>
 
 		<h2>Research</h2>
-		<p>Inventory management in MMOs is one of the hardest user experiences to design. It needs to flow easily while also showing the user everything they have access to. It also needs to be flexible enough for the game team to add and take away things they need, like rarity, gems, etc. Depending on if you are designing for console or not, you also need to consider things like how to open sublists or make category structures that can be easily accessed with a controller vs a mouse. A lot of times design will use a virtual mouse when switching to console, but you still have to consider how tricky your hit targets might be for something with less control than a PC mouse.
-			
-			My first research question was how to layout the inventory? For a fantasy game, especially an MMO, you're going to have a LOT of different crafting items, weapons, resources, potions, etc in your inventory. There are a few examples of how we could approach this problem:
+		<p>My first research question was how to layout the inventory? For a fantasy game, especially an MMO, you're going to have a LOT of different crafting items, weapons, resources, potions, etc in your inventory. There are a few examples of how we could approach this problem:
 			<ul class="list">
 			<li>• A la BotW, with simpler tab categories</li>
 			<li>• A la new world, with weights and items broken down into really small categories </li>
@@ -60,14 +57,7 @@
 	</figure>
 	
 
-		<h2>Wireframes</h2>
-		<p>Onto the wireframes! During this stage, I really wanted to iterate as much as I could before investing in very time-heavy UI creation. The main point of the wireframing stage for me was to make sure the information flowed nicely from screen to screen for the user; I also wanted to make sure that I explored ways to let the user back out of options if they went somewhere they didn’t intend to go.</p>
-		<p>Before I even touched a computer, though, I wanted to get the rough ideas out of my head and onto paper. Even after doing this for a while, it’s amazing to me how a design can look so different in your head vs. when you put it down on paper; the human brain has an amazing way of hiding the flaws in your designs from you 🤣. </p>
-		<p>Originally, I was thinking this game would be more of a timed runner game, kind of like Temple Run, where you would have to dodge PMs and VPs to get your design delivered on time. But there were a few flaws with that idea, the major one being that I wanted the player to feel like they could collaborate with other designers and navigate the corporate world rather than feeling like a football player running a pass down the field. So that idea was scratched.</p>
-		<p>I then sketched out some ideas for a more open-world type game, where the world was an office building with a couple floors that could be navigated by the user. This felt more in line with the original game theme, so I settled on creating wireframes for that idea.</p>
-		<figure>
-			<img src="images/Game_Sketches.jpg">
-		</figure>	
+		<h2>Wireframes</h2>	
 		<p>While wireframing, I ended up going back and doing more research on the open world games that I thought had minimal user interfaces. I also tried to keep my scope limited to just the initial user start up, since I was on a tight time schedule. I felt that focusing on this area would help me later down the road since many of the screens and UI components from an initial user onboarding can be reused in other screens.</p>
 		
 		

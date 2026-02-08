@@ -10,7 +10,7 @@ class MyHeader extends HTMLElement{
 		</a>
 		<nav>
 		<ul class="navigation">
-		  <li><a href="area51.html">Area 51</a></li>
+		  <li><a href="https://www.artstation.com/cjohnson1341" target="_blank">Tech Art</a></li>
 		  <li><a href="about.html">About</a></li>
 		   <li><a href="Resume.pdf" target="_blank">Resume</a></li>
 		</ul>

@@ -1,3 +1,8 @@
+:root {
+  --pink: #f73859;
+  --pink-shadow: hsl(325, 96%, 50%);
+}
+
 html {
 	max-height: 100%;
 }
@@ -11,20 +16,23 @@ header {
 	background-color: #fff;
     display: flex;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
-    height: 40px;
-    padding-bottom: 5px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+	align-items: center;
 }
 
 img {
 	max-width: 100%;
   }
 
+video {
+	width: 100%;
+}
+
 blockquote {
-	color: #f73859;
+	color: var(--pink);
     font-family: 'Avenir 85', Arial, sans-serif;
 	font-size: 32px;
 	font-style: italic;
@@ -63,22 +71,31 @@ h1 {
 
 h2 {
 	font-size: 44px;
-    color: #F73859;
+    color: var(--pink);
     font-family: 'Avenir 85', Arial, sans-serif;
 	margin: 20px auto;
 	padding-top: 50px;
 
 }
 
-h4 {
-	font-size: 16px;
-    color: #F73859;
+h3 {
+	font-size: 1.5rem;
+    color: #222;
     font-family: 'Avenir 85', Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.2222222222222223rem;
+    color: var(--pink);
+    font-family: 'Avenir 85', Arial, sans-serif;
+	margin: 1em;
 }
 
 p {
 	color: #4d4d4d;
 	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 400;
 	line-height: 24px;
 }
 
@@ -88,6 +105,7 @@ nav {
 
 nav ul{
 	display: flex;
+	margin: 1em;
 }
 
 nav ul li {
@@ -108,11 +126,11 @@ a {
 }
 
 a:hover {
-	color: #F73859;
+	color: var(--pink);
 }
 
 button {
-	border: 2px solid #f73859;
+	border: 2px solid var(--pink);
     padding: 10px 30px;
     background-color: #fff;
     color: #4d4d4d;
@@ -121,13 +139,13 @@ button {
 }
 
 button:hover{
-	background-color: #f73859;
+	background-color: var(--pink);
     color: #fff;
     cursor: pointer;
 }
 
 .pink {
-	color: #F73859;
+	color: var(--pink);
 }
 
 .typing_header {
@@ -189,7 +207,7 @@ footer {
 }
 
 .logos:hover {
-	fill: #F73859;
+	fill: var(--pink);
 }
 
 .list-one, .list-two {
@@ -203,7 +221,7 @@ footer {
 }
 
 .email:hover {
-	color: #F73859;
+	color: var(--pink);
 }
 
 .title {
@@ -217,7 +235,7 @@ footer {
 
 .favorites ul li {
 	font-size: 16px;
-    color: #F73859;
+    color: var(--pink);
     font-family: 'Avenir 85', Arial, sans-serif;
     margin: 2px auto;
 }
@@ -226,26 +244,24 @@ footer {
 
 .portfolio_grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 56px 56px;
 	justify-items: stretch;
 	align-items: flex-start;
-	max-width: 1050px;
-    text-align: center;
+	max-width: 1230px;
+    text-align: left;
     margin: auto;
     padding-bottom: 100px;
 }
 
 .color {
-	background-color: #F73859;
+	background-color: var(--pink);
 }
 
 .rotate {
 	width:100%;
 	height: 100%;
 	display: block;
-	transition: transform 1s cubic-bezier(0, 0, 0, 0.99);
-	transform-origin: bottom left;
 }
 
 .project_title {
@@ -257,97 +273,28 @@ footer {
 .project_title_container>p {
 	margin: 0px;
     background-color: #fff;
-    font-size: 12px;
-    font-style: italic;
+    font-size: 0.7777777777777778rem;
+    font-style: normal;
+	text-transform: uppercase;
 }
 
 .rotate:hover {
-	transform: rotateZ(-10deg);
-    transition: transform 1s cubic-bezier(0, 0, 0, 0.99);
-    transform-origin: bottom left;
+    transform-origin: center;
     cursor: pointer;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/*Modals*/
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 999; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Had to switch to hidden to fix a bug for auto typing */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(250,250,250,0.4); /* White w/ opacity */
-    opacity: 0;
-  	animation: fadeIn .5s ease-in 1 forwards;
+  	animation: fadeIn 1s cubic-bezier(0, 0, 0, 0.99);
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
+  0% {
+    transform: scale(1);
+  	box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+	background-color: rgba(250,250,250,0);
   }
-}
-
-/* Modal Content/Box */
-
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border-top: 10px solid #f73859;
-    width: 80%;
-    box-shadow: 2px 3px 30px rgba(170, 170, 170, 0.20);
-}
-
-.flex {
-	display: flex;
-}
-
-.flex_image {
-	align-self: center;
-}
-
-.right-column {
-	text-align: left;
-    padding-left: 40px;
-}
-
-.buttons {
-	color: #f73859;
-}
-
-.buttons:hover {
-	color: #fff;
-}
-
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    width: 20px;
-    height: 30px;
-    padding: 5px 10px;
-    border-radius: 50px;
-    background-color: rgba(250,250,250,0);
-    transition: background-color 0.2s ease-out;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    transition-timing-function: ease-out;
-    background-color: rgba(170, 170, 170, 0.20);
+  100% {
+    transform: scale(1.03);
+  	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+	background-color: rgba(250,250,250,0.05);
+  }
 }
 
 /* Generic Project Page */
@@ -367,10 +314,10 @@ footer {
 
 .blog_post {
 	display: grid;
-	max-width: 1000px;
+	max-width: 1230px;
 	margin: 50px auto 200px;
 	grid-gap: 10px 50px;
-	grid-template-columns: 3fr 12fr 3fr;
+	grid-template-columns: 1fr 12fr 1fr;
 }
 
 .blog_post > * {
@@ -383,7 +330,7 @@ footer {
 }
 
 figcaption {
-	border: solid #f73859;
+	border: solid var(--pink);
     border-width: 0px 0px 0px 5px;
     padding: 10px;
 	margin: 10px 0px;
@@ -442,6 +389,18 @@ figure > img {
 	max-width: 100%;
 }
 
+.multi_image {
+	display: flex;
+  flex-direction: row;
+  width: 100%;
+  grid-column: 1/-1;
+  margin: 0;
+}
+
+.multi_image > figure {
+	margin: 0px 4px;
+}
+
 /*About Page*/
 
 .line {
@@ -470,7 +429,7 @@ figure > img {
 
 .flip-container {
 	perspective: 1000px;
-	background-color: #f73859;
+	background-color: var(--pink);
 	max-height: 475px;
 }
 
@@ -846,12 +805,13 @@ button:focus {
 	}
 
 	h4 {
-		font-size: 26px;
-    	margin: 20px auto 10px;
+		font-size: 1.5rem;
+    	margin: 20px 1em 10px;
 	}
 
 	.logo {
 		padding-left: 0px; 
+		padding-bottom: 10px;
 	}
 
 	.navigation {

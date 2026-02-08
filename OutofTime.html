@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Out of Time
+	</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="images/Favicon.png" />
+	<script type="text/javascript" src="script.js"></script>
+<body>
+
+	<my-header></my-header>
+
+<div id="page-container">
+	<div id="content-wrap">
+
+<section class="hero">
+	<div class="cover_photo">
+		<img class="cover_photo" src="images/SplashScreenLogo.png">
+	</div>
+</section>
+
+<section class="blog_post">
+	
+<section class="summary">
+	<div class="main_summary">
+		<p>Joining Manticore Games in 2021, I spent over four years as a Senior, then Principal, UI/UX Designer, moving from high-level conceptual wireframing to full-stack UMG implementation. I navigated the project’s evolution through several complex genres—including an MMO, a user generated content editor, and a Lifestyle Simulator—culminating in the successful launch of Out of Time, a third-person co-op roguelike with an 85% positive Steam rating. This breadth of requirements allowed me to architect diverse UI systems, and by 2025, I transitioned into a more technical rollout role, refining my Unreal Engine skills through deep-level feature implementation and performance optimization.
+			</p>
+			<a href="https://store.steampowered.com/app/4038140/Out_of_Time/" class="buttons" target="_blank"><button>Check out Out of Time</button></a>
+	</div>
+	<div class="summary_columns">
+	<div class="summary_left">
+		<ul class="list">
+			<li><strong>Role:</strong> UX/UI Designer and Team Lead </li>
+		</ul>
+	</div>
+	<div class="summary_right">
+		<ul class="list">
+			<li><strong>Timeframe:</strong> October 2021 – February 2026</li>
+		</ul>
+	</div>
+</div>
+</section>
+
+<h2>Squad and Social Features (2024-2026)</h2>
+		<p>I worked with the product team on wireframes and design iterations for our squad and social UI, a core pillar of Out of Time's user experience. UI wireframes/designs were done by me in Figma, then formatted and imported for Unreal. UMG widgets that leveraged Common UI for controller support were used to create all the designs in Unreal; I also contributed to the engineering implementation in blueprints. The player tiles specifically had to be created in a modular way so they could be used in both squad and social panel experiences.</p>
+		<p>Both the squad and social panel UMG components were built by me, and then then I went in and helped hook up data, viewmodels, and animations with a UI Engineer. It was one of the more complex UIs I've ever built and it really was quite satisfying to see it all come together at the end. </p>
+    
+        <figure>
+        <video autoplay loop muted>
+            <source src="images/FinalSocialUI.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Final Social Panel UI design in game</figcaption>
+        </figure>
+
+        <figure>
+        <video autoplay loop muted>
+            <source src="images/FinalSquadUI.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Final Squad UI design in game</figcaption>
+        </figure>
+	
+
+		<h3>Research</h3>
+		<p>While initially researching for this project, we looked at social and MMO type games like Fortnite, Warframe and New World to inform our information hierarchy and layout ideas.</p>
+        <ul class="list">
+			<li>• A tile-based approach seemed best since we would want to expand user actions and also use these tiles in a few places, like the squad panel</li>
+			<li>• Tiles offered a quick way to discern if users were online or offline, if they were friends, and where they might be at any given moment.</li>
+			</ul>	
+
+		<h3>Social Panel Iterations</h3>
+		<p>Since our game relied heavily on co-op play, the social and squad panels had to do a lot of heavy lifting when it came to user experience while also being their own distinct screens. When looking at the social panel, it had to enable users to easily parse and take action on a few things:</p>
+        <ul class="list">
+			<li>• Most importantly and located at the top of the list: Who wants to be your friend? And who is already your friend?</li>
+			<li>• Next on the list, we wanted to be sure you could see immediately who was nearby and available to do a run.</li>
+            <li>• Lastly, we wanted you to have a list of available players that you had recently played with. Since our queuing system could pop you into a run with anyone, we wanted you to be able to see who it was that did 12k damage as a tank/healer in that last run!</li>
+			</ul>	
+			<figure>
+				<img src="images/SquadSocialExplorations1.jpg">
+				<figcaption>Various wireframes and iterations trying to establish information hierarchy for the social panel.</figcaption>
+			</figure>
+
+			<h3>Squad Panel Iterations</h3>
+		<p>The squad panel was a conundrum of "how much of the screen should we cover?" While the social panel was intended as a companion screen that you could have open while looking into the world, we felt the squad panel was a much more purposeful action taken by the player and should both represent your squaded state AND show you a social list of players you could specifically take squad actions on. We had so many conversations about whether or not it would negatively impact the user experience if the player couldn't see what was going on behind the screen, but in the end we did decide to do a full screen design. This enabled us to have a left hand "squad state" UI that could show up whether the panel was open or closed, as well as a specific "squad social panel" that would only show when you needed to form a squad or take specific squad actions.</p>	
+			<figure>
+				<img src="images/SquadSocialExplorations2.jpg">
+				<figcaption>The squad panel had quite a few iterations based on which squad actions you could take when, and what states you needed to see at any given time.</figcaption>
+			</figure>
+	
+		<h2>Farming</h2>
+		<p>One feature that was really a delight to work on was quite small, and it was focused on farming. We needed a way to keep players coming back to their plots every day, so we devised a farming feature that would take up real world time to grow and harvest a plant. The benefit to this system for a player was that they didn't have to go out and harvest in the wilds every time they needed an ingredient for crafting. We would also offer a way for players to pay to make a plant grow faster.</p>
+			<figure>
+			<img src="images/farming.png">
+			<figcaption>Look at my beautiful fields *caresses stalks of wheat* (bonus points for understanding the reference)</figcaption>
+			</figure>
+			<div class="multi_image">
+		<figure>
+			<img src="images/planting.png">
+			<figcaption>When planting, we needed feedback to let the player know if they had enough seeds and the correct farming level. I also advocated for a preview of the plant at full growth in the box as they looked through the catalogue.</figcaption>
+		</figure>
+		<figure>
+			<img src="images/apartmentfarming.png">
+			<figcaption>Since players could also have apartments, we couldn't leave them out of the farming fun!</figcaption>
+		</figure>
+	</div>
+
+
+		
+	<h2>Plot Decorating (2023-2025)</h2>
+		<p>As the UGC feature got underway, I played a core role in architecting how player's could bring their decorations onto their own plots. This was an exercise in keeping multiple complex mouse and keyboard controls in one area for the player to reference, while making sure it didn't cover any valuable screenspace while decorating. This was also a challenging design exercise for more didactic UI work, where I had to figure out how a player would know something was selected, if it was too large for their space, and how they would be able to manipulate it with their mouse cursor. We did a lot of case studies on Palia, Animal Crossing, and Disney Dreamlight Valley to inform our design decisions here.</p>
+		<figure>
+			<img src="images/HousePreview.png">
+			<figcaption>A mode you could enter to place a house on a plot. You could use your mouse to move it around and place it on the plot, while the mouse wheel would cycle through house selections.</figcaption>
+		</figure>
+	<div class="multi_image">
+		<figure>
+			<img src="images/Item Chosen-28.png">
+			<figcaption>An exploration of how a player would know to scale an item, while also not losing a sense of place within the world. One of the issues we ran into early on was because we were a third person game, knowing how far away something was or what surface it was snapped to was intensly challenging without some sort of in-world marker.</figcaption>
+		</figure>
+		<figure>
+			<img src="images/RotateGridOn.png">
+			<figcaption>An exploration of what a rotate and snap decal could look like when you enter rotate mode.</figcaption>
+		</figure>
+	</div>
+
+	<h2>User Generated Content (UGC) Editor (2022)</h2>
+		<p>One of the longest running tasks I had during my time at Manticore was various design iterations of what a User Generated Content (UGC) editor could look like. I did a few designs for the team and ended up with a design from scratch, as well as a simplified version that would integrate seamlessly into our exiting Core editor. There were quite a few challenges:
+			<ul class="list">
+			<li>• In all of our iterations of the editor, the core concept stayed the same: to craft a UGC item, players would have to use in game resources and gold to publish them. This meant they had to see at all times how much it was going to cost them to build.</li>
+			<li>• We had access to an almost <stong>unlimited</stong> number of assets to build with and just as large of a catalogue of "plans" they could build off of</li>
+			<li>• I also had to know how players were going to be searching and grouping plans in their heads so they could better locate what they were looking for; it was almost like desiging the menu navigation for an ecommerce site. This ended up being a 2 month long card sorting and tree testing research exercise.</li>
+			</ul>	
+		</p>
+	<figure>
+			<img src="images/UGCEditor.png">
+			<figcaption>An in progress wireframe for the UGC editor within Core; we hadn't yet figured out what our resource icons were going to look like.</figcaption>
+	</figure>
+	<div class="multi_image">
+		<figure>
+			<img src="images/simplifiedUGC1.png">
+			<figcaption>An older exploration showing a more ambitious template that would have "sockets" that players could slot items into, that would then work interactively in the world.</figcaption>
+		</figure>
+		<figure>
+			<img src="images/simplifiedUGC2.png">
+			<figcaption>A publish page, showing the player how much their item would cost to publish with in-game resources, weight, performance, and a marketplace preview image.</figcaption>
+		</figure>
+	</div>
+
+
+
+</section>
+
+<my-footer></my-footer>
+
+</div>
+</div>
+
+</body>
+</html>
