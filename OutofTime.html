@@ -85,6 +85,29 @@
 				<img src="images/SquadSocialExplorations2.jpg">
 				<figcaption>The squad panel had quite a few iterations based on which squad actions you could take when, and what states you needed to see at any given time.</figcaption>
 			</figure>
+
+			<h2>Location Details</h2>
+	<p>To support our world-map expansion, I directed the R&D for our looping video preview system, conducting rigorous performance audits on video formats and capture rates. By achieving a 3MB footprint per asset, I mitigated potential storage and performance issues, which was crucial for a map that would likely have 30+ locations in the future. These standards were later adopted as the studio-wide benchmark for our Ability Preview system as well.</p>
+	<p>I also owned the UI design for the Location Detail Panel, a highly detailed panel that utilized a stacked hierarchy to display difficulty settings, drop rates, and personal best run times without compromising the visual 'hero shot' of the environment. After finalizing the design, I implemented various UMG widgets such as the difficulty switcher, the tooltips, and the drop rate bar.</p>
+
+	<figure>
+        <video autoplay loop muted>
+            <source src="images/LocationDetailsPanel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>A preview of the location details, as well as the ability preview videos.</figcaption>
+        </figure>
+
+	<h2>Queueing System</h2>
+	<p>I led the design evolution of our Matchmaking and Queueing systems, balancing the technical requirements of squad-synching with the player’s desire for continuous engagement. I moved the project from a modal-locked queueing experience to a global HUD overlay, ensuring that 'Time-in-Queue' and squad-state remained visible regardless of the current menu depth. This required a rigorous breakdown of UI priority and state management to ensure that the persistent queue widget never interfered with deeper sub-menus, while still providing a clear path to the 'Game Confirmed' interaction.</p>
+
+	<figure>
+        <video autoplay loop muted>
+            <source src="images/QueueSystem.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>The queueing system, which allowed for a 120s count up to wait for other players to join and allowed a long press to leave the queue. Most of the animations were done in the sequencer.</figcaption>
+        </figure>
 	
 		<h2>Farming</h2>
 		<p>One feature that was really a delight to work on was quite small, and it was focused on farming. To drive daily active users (DAU), we implemented a real-time  growing cycle that allowed players to generate crafting materials directly from their plots. I developed a modular square-foot planting mechanic, using Core as a prototyping environment. I refined the interaction affordances for planting and harvesting, ensuring the UI-to-World transition felt responsive. The goal was to create a scalable grid system that could handle high-density placement while providing the player with clear, actionable feedback throughout the crop’s lifecycle. This system provided a dual benefit: it reduced the friction of manual resource gathering while creating a consistent, rewarding reason for players to return to the game world daily.</p>
@@ -102,13 +125,6 @@
 			<figcaption>Since players could also have apartments, we couldn't leave them out of the farming fun!</figcaption>
 		</figure>
 	</div>
-
-    <h2>Location Details</h2>
-	<p>To support our world-map expansion, I directed the R&D for our looping video preview system, conducting rigorous performance audits on video formats and capture rates. By achieving a 3MB footprint per asset, I mitigated potential storage and performance issues, which was crucial for a map that would likely have 30+ locations in the future. These standards were later adopted as the studio-wide benchmark for our Ability Preview system as well.</p>
-	<p>I also owned the UI design for the Location Detail Panel, a highly detailed panel that utilized a stacked hierarchy to display difficulty settings, drop rates, and personal best run times without compromising the visual 'hero shot' of the environment.</p>
-
-	<h2>Queueing System</h2>
-	<p>I led the design evolution of our Matchmaking and Queueing systems, balancing the technical requirements of squad-synching with the player’s desire for continuous engagement. I moved the project from a modal-locked queueing experience to a global HUD overlay, ensuring that 'Time-in-Queue' and squad-state remained visible regardless of the current menu depth. This required a rigorous breakdown of UI priority and state management to ensure that the persistent queue widget never interfered with deeper sub-menus, while still providing a clear path to the 'Game Confirmed' interaction.</p>
 		
 	<h2>Plot Decorating</h2>
 		<p>I played a core role in architecting how player's could bring their decorations onto their own plots. The primary challenge was balancing a high-density control panel (mouse/keyboard) with the need for an unobstructed creative field-of-view. I implemented a didactic UI framework that utilized clear visual affordances—such as contextual selection states, collision warnings, and cursor-linked manipulation widgets—to provide real-time feedback. I led a series of competitive case studies on titles like Animal Crossing and Palia to ensure that critical keyboard shortcuts remained accessible without encroaching on the player's workspace.</p>
