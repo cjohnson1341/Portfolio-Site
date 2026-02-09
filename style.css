@@ -348,6 +348,7 @@ figcaption {
 
 figure > img {
 	object-fit: fill;
+	width: 100%;
 }
 
 .list {
